@@ -6,6 +6,8 @@ public class COE420L1 {
 		// TODO Auto-generated method stub
 		
 		System.out.println("Hello World");
+		
+		System.out.println("FeatureB");
 	}
 
 }
