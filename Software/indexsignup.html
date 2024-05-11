@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <form action="" method="post">
+        <h2>Registration</h2>
+        <div class="content">
+            <div class="input-box">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="@John Smith" name="name" required>
+            </div>
+
+            <div class="input-box">
+                <label for="name">Username</label>
+                <input type="text" placeholder="John2020" name="uname" required>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" placeholder="John2020@hotmail.com" name="email" required>
+            </div>
+
+            <div class="input-box">
+                <label for="phonenumberl">Phone number</label>
+                <input type="tel" placeholder="050-1234 567" name="phoneNumber" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" placeholder="John20202Smith." name="password" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">&#x1F441;</span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="Cpassword">Confirm Password</label>
+                <div class="password-input">
+                    <input type="password" id="confirmPassword" placeholder="John20202Smith." name="confirmpassword" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">&#x1F441;</span>
+                </div>
+            </div>
+        </div>
+        <div class="alert">
+            <p>By clicking sign Up, you agree to our <a href="#">Privacy Policy,</a> and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+        </div>
+        <div class="button-container">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function togglePasswordVisibility(id) {
+        var passwordInput = document.getElementById(id);
+        var toggleIcon = passwordInput.nextElementSibling;
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleIcon.innerHTML = "&#x1F440;"; // Eye closed icon
+        } else {
+            passwordInput.type = "password";
+            toggleIcon.innerHTML = "&#x1F441;"; // Eye open icon
+        }
+    }
+</script>
+</body>
+</html>
